@@ -37,5 +37,6 @@ const cat = new Animal ( 'baker bhai','cat', 'mew mew');
 // console.log(dog.name);
 // console.log(dog.sound);
 // console.log(dog.species);
+
 cat.makeSound()
 dog.makeSound()
