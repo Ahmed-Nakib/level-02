@@ -42,9 +42,13 @@
 
  const nakibAccount = new BankAccount(111, "Nakib", 3000)
 
- nakibAccount.addBalance(111)
+//  nakibAccount.addBalance(111)
 
- console.log(nakibAccount.getBalance());
+//  console.log(nakibAccount.getBalance());
 
- nakibAccount.getBalance
+//  nakibAccount.getBalance
+
+
+nakibAccount.addBalance = 10000;
+
  
