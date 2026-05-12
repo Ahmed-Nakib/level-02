@@ -1,12 +1,13 @@
-import { createServer, IncomingMessage, Server } from "http";
-import { routeHandler } from "./route/route";
+import { createServer, IncomingMessage, Server, ServerResponse } from "http";
+import config from "./config";
+import { routeHandler } from "./routes/route";
 
-const server: Server = createServer((req : IncomingMessage, res) => {
-    routeHandler(req, res)
-})
+const server: Server = createServer(
+  (req: IncomingMessage, res: ServerResponse) => {
+    routeHandler(req, res);
+  },
+);
 
-
-
-server.listen(5000, ()=> {
-    console.log("Server is running on the port 5000");
-})
+server.listen(config.port, () => {
+  console.log(`The server is running on the port ${config.port}`);
+});
