@@ -1,19 +1,19 @@
 import { orderService } from "../service/order.service";
-import type { Req, Res } from "../type";
+import type { Order, Req, Res } from "../type";
 import { extractRequestInfo, sendResponse } from "../utils";
 
 export const orderRoute = async (req: Req, res: Res) => {
 
-    const {url, params} = extractRequestInfo(req);
+    const {method, params, body} = await extractRequestInfo<Omit<Order, "id">>(req);
     const orderId = params[1]
 
-    if(req.method === "GET" && !orderId){
+    if(method === "GET" && !orderId){
         const orders = await orderService.get();
         sendResponse(res, {message: "Order retrieved successfully", data: orders}, 200);
         return
     }
     
-    if(req.method === "GET" && orderId) {
+    if(method === "GET" && orderId) {
         const order = await orderService.getById(orderId);
 
         sendResponse(res,
@@ -22,7 +22,7 @@ export const orderRoute = async (req: Req, res: Res) => {
         return
     }
 
-    if(req.method === "DELETE" && orderId) {
+    if(method === "DELETE" && orderId) {
         const deleted = await orderService.getById(orderId);
 
         sendResponse(res,
@@ -31,5 +31,16 @@ export const orderRoute = async (req: Req, res: Res) => {
         return
     }
 
+    if(method === "POST" && body){
+        const newOrder = orderService.create(body)
+        sendResponse(res, {message: "Order created", data: newOrder}, 201);
+        return
+    }
+    
+    if(method === "PUT" && body && orderId){
+        const updated = await orderService.update(orderId, body)
+        sendResponse(res, {message: updated ? "Update successfully": "undefined ", data: updated}, updated ? 201 : 404);
+        return
+    }
     
 }

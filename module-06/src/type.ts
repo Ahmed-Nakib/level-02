@@ -17,4 +17,4 @@ export type Req = IncomingMessage & {
 // }
 
 
-export type Order = typeof data[]
+export type Order = typeof data[number]
