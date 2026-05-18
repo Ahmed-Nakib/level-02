@@ -1,0 +1,48 @@
+
+Method -> POST - Time -> 1779122999903, URL -> /api/users/
+
+Method -> POST - Time -> 1779123038687, URL -> /api/users/
+
+Method -> GET - Time -> 1779123048819, URL -> /api/users/
+
+Method -> GET - Time -> 1779123087173, URL -> /api/auth/
+
+Method -> GET - Time -> 1779123349585, URL -> /api/auth/
+
+Method -> POST - Time -> 1779123363231, URL -> /api/profile/
+
+Method -> GET - Time -> 1779123373298, URL -> /api/profile/
+
+Method -> GET - Time -> 1779123500094, URL -> /api/auth/
+
+Method -> GET - Time -> 1779123594792, URL -> /api/auth/login
+
+Method -> GET - Time -> 1779123596642, URL -> /api/auth/login
+
+Method -> GET - Time -> 1779123636533, URL -> /api/auth/login
+
+Method -> POST - Time -> 1779123640642, URL -> /api/auth/login
+
+Method -> GET - Time -> 1779123839943, URL -> /api/users
+
+Method -> GET - Time -> 1779123938580, URL -> /api/users
+
+Method -> POST - Time -> 1779124244831, URL -> /api/auth/login
+
+Method -> POST - Time -> 1779124290133, URL -> /api/users
+
+Method -> GET - Time -> 1779124299084, URL -> /api/users
+
+Method -> POST - Time -> 1779124319900, URL -> /api/users
+
+Method -> POST - Time -> 1779124347675, URL -> /api/users
+
+Method -> POST - Time -> 1779124392544, URL -> /api/auth/login
+
+Method -> POST - Time -> 1779124409813, URL -> /api/users
+
+Method -> GET - Time -> 1779124459859, URL -> /api/users
+
+Method -> GET - Time -> 1779124592726, URL -> /api/users
+
+Method -> GET - Time -> 1779124703133, URL -> /api/users
